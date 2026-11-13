@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Rota — acompanhe suas entregas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="Rota, início"><span class="brand-mark">↗</span><span>rota<span class="brand-dot">.</span></span></a>
+      <div class="workspace-label">MENU PRINCIPAL</div>
+      <nav class="side-nav" aria-label="Navegação principal">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">▦</span>Minhas entregas</button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span>Configurações</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-spark">✳</span><strong>Precisa de ajuda?</strong><p>Estamos aqui para você.</p><button class="text-link" data-action="support">Falar com suporte <span>→</span></button></div>
+        <button class="profile" data-view="settings"><span class="avatar">MC</span><span class="profile-text"><strong>Marina Costa</strong><small>Conta pessoal</small></span><span class="profile-more">···</span></button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="menu-toggle" aria-label="Abrir menu">☰</button>
+        <div class="breadcrumbs"><span>Início</span><span class="crumb-sep">/</span><strong id="breadcrumb-current">Minhas entregas</strong></div>
+        <div class="top-actions"><button class="icon-button notification" aria-label="Notificações">♧<i></i></button><span class="top-avatar">MC</span></div>
+      </header>
+      <section id="screen" class="screen" aria-live="polite"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
